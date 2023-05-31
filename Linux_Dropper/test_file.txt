@@ -1,0 +1,5 @@
+Its is a random file 
+that will contain some random
+messages that i will try to send 
+encrypted over the network, i hope to
+send the right way!!
