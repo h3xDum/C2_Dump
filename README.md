@@ -1,4 +1,4 @@
-# Dumper Documentation  
+# Documentation  
 
 The RAT in desigen is a sophisticated malware that perform  
  malicious activities undetected by AV's from a remote Host.  
@@ -15,7 +15,7 @@ how the entire procees would look from the post-infection point
 to the fully compermised state. 
 &nbsp;  
   
-## Staging & Persistence:
+### Staging & Persistence:
 We want to achieve a multi-step staging proccess that will eventually  
 load the malware implant into the infected computer in an unnoticed and stealthy way.  
 Those are the componenets for securing this:  
