@@ -25,8 +25,7 @@
 
 
 /* Get a functional server sock*/
-int init_server(){
-    
+int init_server(){    
     // Init sokcet type as a server 
     int serverSock, returnVal;
     int reuse = 1;
@@ -72,8 +71,8 @@ int init_server(){
     return serverSock;
 }
 
-char* get_peer_ip(int socketDescriptor) {
-    
+
+char* get_peer_ip(int socketDescriptor) {    
     struct sockaddr_storage addr;
     socklen_t addrLength = sizeof(addr);
 
@@ -96,6 +95,7 @@ char* get_peer_ip(int socketDescriptor) {
     }
 }
 
+
 void shuffle_key(char *key){      
     for (int i = 0; i < 5; i++){
         char temp = key[i];
@@ -105,8 +105,8 @@ void shuffle_key(char *key){
     
 }
 
+
 void enc_message(char* buffer, char* key , int len ){
-    
     for ( int i = 0,key_index = 0; i < len; i++, key_index++){
         if (key_index == 10) {
             key_index = 0;
@@ -115,9 +115,8 @@ void enc_message(char* buffer, char* key , int len ){
     }
 } 
 
+
 int handle_new_connection(int clientSock, char* recvData , char *returnKey){
-
-
     // Auth rotuine -> send 10 bytes long key
     if (strcmp ("established connection", recvData) != 0) {
         returnKey = nullptr;
@@ -194,6 +193,7 @@ int handle_new_connection(int clientSock, char* recvData , char *returnKey){
     returnKey = nullptr;
     return -1;
 }
+
 
 int handle_connection(int clientSock, char *recvData){
     char buff[NETWORK_CHUNK_SIZE] = {0};

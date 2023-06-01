@@ -1,7 +1,6 @@
 #include "network.hpp"
 
-int main(void) {
-    
+int main() {
     fd_set master, read_fds;  
     int newClientFD, maxFD, nBytes;        
     struct sockaddr_storage clientAddress; 
